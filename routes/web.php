@@ -15,6 +15,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+
 $router->get('/all', 'SenatorsController@all');
+
+$router->get('/fetch/states', 'SenatorsController@fetchStates');
 $router->get('/fetch/state/{state}', 'SenatorsController@fetchByState');
+
 $router->get('/fetch/name/{name}', 'SenatorsController@fetchByName');
